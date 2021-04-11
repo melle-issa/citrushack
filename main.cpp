@@ -100,7 +100,8 @@ int Online(){ // produces roughly 20g per web page yielding 10 results
 
 int main(){
     cout << "Welcome to your week!" << endl;
-    cout << "You will track how much waste you consume every day and check out your impact on the environment at the end of the week." << endl;
+    cout << "You will track how many grams of carbon dioxide your daily habits produce every day." << endl;
+    cout << "At the end of the week, check out your total impact on the environment!" << endl;
     
     int dayNum = 1;
     int carbonPoints = 0;
@@ -166,13 +167,13 @@ int main(){
      cout << "Your total carbon dioxide output for the week is " << carbonPoints << " grams." << endl;
      
      vector<int> totals;
-     totals.at(0) = tot1;
-     totals.at(1) = tot2;
-     totals.at(2) = tot3;
-     totals.at(3) = tot4;
-     totals.at(4) = tot5;
-     totals.at(5) = tot6;
-     totals.at(6) = tot7;
+     totals.push_back(tot1);
+     totals.push_back(tot2);
+     totals.push_back(tot3);
+     totals.push_back(tot4);
+     totals.push_back(tot5);
+     totals.push_back(tot6);
+     totals.push_back(tot7);
      
      int i;
      int max = totals.at(0);
@@ -182,30 +183,27 @@ int main(){
           }
      }
      
-     string mostUsed;
-     if(max == tot1){
-      mostUsed = "plastic bottles";    
+     if(max == totals.at(0)){
+      cout << "The thing that contributed most to your carbon dioxide output was plastic bottles." << endl;
      }
-     else if(max == tot2){
-      mostUsed = "aluminum cans";    
+     else if(max == totals.at(1)){
+      cout << "The thing that contributed most to your carbon dioxide output was: aluminum cans." << endl;
      }
-     else if(max == tot3){
-      mostUsed = "plastic bags";    
+     else if(max == totals.at(2)){ 
+      cout << "The thing that contributed most to your carbon dioxide output was: plastic bags." << endl;
      }
-     else if(max == tot4){
-      mostUsed = "driving your car";    
+     else if(max == totals.at(3)){ 
+      cout << "The thing that contributed most to your carbon dioxide output was: driving your car." << endl;
      }
-     else if(max == tot5){
-      mostUsed = "talking on the phone";    
+     else if(max == totals.at(4)){
+      cout << "The thing that contributed most to your carbon dioxide output was: talking on the phone." << endl;
      }
-     else if(max == tot6){
-      mostUsed = "taking showers";    
+     else if(max == totals.at(5)){
+      cout << "The thing that contributed most to your carbon dioxide output was: taking showers." << endl;
      }
-     else if(max == tot7){
-      mostUsed = "using the internet";    
+     else if(max == totals.at(6)){
+      cout << "The thing that contributed most to your carbon dioxide output was: using the internet." << endl;
      }
-     
-     cout << "The thing that contributed most to your carbon dioxide output was: " << mostUsed << "." << endl;
     
     return 0;
 }
