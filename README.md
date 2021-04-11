@@ -1,1 +1,3 @@
 # citrushack
+
+This is a project submitted to Citrus Hack 2021. It was created within the 36 hour time frame given. The goal of this program is to help users track their daily habits and how much CO2 emissions those habits produce. Each day for one week, the user picks from a variety of 7 actions that help calculate how many grams of CO2 were produced from that action. At the end of the week, the user is given their total production value and the task/item they used that contributed the most to CO2 emissions. This program leaves room to add in suggestions at the end of the week with products or changes that the user can take advantage of. 
